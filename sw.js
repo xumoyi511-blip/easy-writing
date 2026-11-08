@@ -1,5 +1,5 @@
 /* sw.js — 离线缓存（Cache-First） */
-const CACHE = 'easy-writing-ipad-v1';
+const CACHE = 'easy-writing-ipad-v2';
 const ASSETS = [
   './',
   './index.html',
