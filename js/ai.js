@@ -160,7 +160,7 @@
         if (p) { baseURL.value = p.baseURL; modelName.value = p.model; }
       });
 
-      const m = EW.openModal({
+      const modal = EW.openModal({
         title: isNew ? '添加模型' : '编辑模型',
         body: EW.el('div', {}, [
           EW.el('div', { class: 'field' }, [EW.el('label', { text: '名称' }), name]),
@@ -177,7 +177,7 @@
           ])]),
         ]),
         foot: EW.el('div', { style: 'display:flex;gap:10px;width:100%;' }, [
-          EW.el('button', { class: 'btn', style: 'flex:1;', text: '取消', onclick: () => m.close() }),
+          EW.el('button', { class: 'btn', style: 'flex:1;', text: '取消', onclick: () => modal.close() }),
           EW.el('button', { class: 'btn primary', style: 'flex:1;', text: '保存', onclick: () => {
             if (!name.value.trim()) { EW.toast('请填名称'); return; }
             model.name = name.value.trim();
@@ -189,7 +189,7 @@
             model.thinking = thinking.checked;
             if (isNew) { models.push(model); if (models.length === 1) model.isDefault = true; }
             setModels(models);
-            m.close(); draw();
+            modal.close(); draw();
             EW.toast('已保存模型');
           } }),
         ]),
