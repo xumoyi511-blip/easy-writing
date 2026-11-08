@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#1f2430" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="易创写作" />
+  <title>易创写作 · iPad 本地创作</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="icon" type="image/png" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button id="btn-back" class="icon-btn" aria-label="返回书架" hidden>&#8592;</button>
+      <div class="topbar-title" id="topbar-title">易创写作</div>
+      <div class="topbar-actions">
+        <button id="btn-quick-note" class="icon-btn" aria-label="记灵感" title="记灵感">&#9998;</button>
+        <button id="btn-settings" class="icon-btn" aria-label="设置" title="设置">&#9881;</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- 书架首页 -->
+      <section id="view-home" class="view"></section>
+      <!-- 写作台 -->
+      <section id="view-book" class="view" hidden></section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+  <div id="modal-root"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/editor.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/graph.js"></script>
+  <script src="js/reference.js"></script>
+  <script src="js/export.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/bookshelf.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
